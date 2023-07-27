@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+credit_risk/
 
 # Spyder project settings
 .spyderproject
