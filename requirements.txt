@@ -1,0 +1,22 @@
+pymongo
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+ipykernel
+notebook
+dill
+flask
+six
+plotly
+pycaret
+catboost
+xgboost
+kneed
+streamlit
+jupyter
+optuna
+
+-e .

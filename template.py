@@ -20,7 +20,6 @@ list_of_files = [
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/constants/__init__.py",
     "config/config.yaml",
-    "Data/test.csv",
     "params.yaml",
     "app.py",
     "main.py",
@@ -28,7 +27,7 @@ list_of_files = [
     "requirements.txt",
     "get_data.py",
     "setup.py",
-    "research/trials.ipynb",
+    "notebook/trials.ipynb",
     "test.py"
 
 ]
