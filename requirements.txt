@@ -18,5 +18,13 @@ kneed
 streamlit
 jupyter
 optuna
-
+pyYAML
+tqdm
+ensure
+joblib
+types-pyYAML
+Flask
+Flask-Cors
+python-box
+mlflow
 -e .

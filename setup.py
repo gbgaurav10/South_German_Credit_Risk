@@ -1,34 +1,28 @@
+import setuptools
 
-from setuptools import find_packages, setup 
-from typing import List
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
 
 
-HYPEN_E_DOT = "-e ."
+__version__ = "0.0.0"
+REPO_NAME = "south_german_credit_risk"
+AUTHOR_USER_NAME = "gbiamgaurav"
+SRC_REPO = "south_german_bank"
+AUTHOR_EMAIL = "gaurav.bhattacharya10@gmail.com"
 
-def get_requirements(file_path:str) -> List:
-    
-    """ This function will return the list of requirements """
-    
-    
-    requirements = []
-    
-    with open(file_path) as file_obj:
-        requirements = file_obj.readlines()
-        requirements = [req.replace("\n", "") for req in requirements]
-        
-        if HYPEN_E_DOT in requirements:
-            requirements.remove(HYPEN_E_DOT)
-    
-    return requirements
 
-    # test
-        
-
-setup(
-    name="South-german-bank",
-    version="0.0.1",
-    author="Gaurav",
-    author_email="gaurav.bhattacharya10@gmail.com",
-    packages=find_packages(),
-    include_dirs=get_requirements("requirements.txt")
+setuptools.setup(
+    name = SRC_REPO,
+    version = __version__,
+    author = AUTHOR_USER_NAME,
+    author_email = AUTHOR_EMAIL,
+    description = "A small package for ML app",
+    long_description = long_description,
+    long_description_content = "text/markdown",
+    url = f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
+    project_url = {
+        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues"
+    },
+    package_dir = {"": "src"},
+    packages = setuptools.find_packages(where="src")
 )

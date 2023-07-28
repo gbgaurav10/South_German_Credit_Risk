@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 
-project_name = "South_German_Bank"
+project_name = "south_german_bank"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
