@@ -1,0 +1,11 @@
+
+#data ingestion
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: https://github.com/gbiamgaurav/datasets/raw/main/south_german_credit.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+  
