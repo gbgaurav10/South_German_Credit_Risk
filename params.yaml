@@ -1,1 +1,4 @@
-key: value
+XGBClassifier:
+  n_estimators: 300
+  max_depth: 8
+  min_child_weight: 6
