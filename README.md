@@ -20,3 +20,31 @@
 8. Update the main.py
 
 9. Update the app.py
+
+
+## MLFlow
+
+## cmd
+- mlflow uri
+
+
+## dagshub
+[dagshub][https://dagshub.com]
+
+```
+MLFLOW_TRACKING_URI=https://dagshub.com/gbiamgaurav/South_German_Credit_Risk.mlflow \
+MLFLOW_TRACKING_USERNAME=gbiamgaurav \
+MLFLOW_TRACKING_PASSWORD=352861024ebede76aa75cf4ea021ee1f74b0e39f \
+python script.py
+
+```
+
+### Run this to export as env_variables
+
+```
+set MLFLOW_TRACKING_URI=https://dagshub.com/gbiamgaurav/South_German_Credit_Risk.mlflow
+
+set MLFLOW_TRACKING_USERNAME=gbiamgaurav 
+
+set MLFLOW_TRACKING_PASSWORD=352861024ebede76aa75cf4ea021ee1f74b0e39f 
+```
