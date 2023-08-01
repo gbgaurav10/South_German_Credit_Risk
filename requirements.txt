@@ -27,4 +27,5 @@ Flask
 Flask-Cors
 python-box
 mlflow
+
 -e .
