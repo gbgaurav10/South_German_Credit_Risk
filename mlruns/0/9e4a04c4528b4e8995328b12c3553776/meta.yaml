@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/collab_projects/South_German_Credit_Risk/mlruns/0/9e4a04c4528b4e8995328b12c3553776/artifacts
+end_time: 1690880422974
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9e4a04c4528b4e8995328b12c3553776
+run_name: bold-skink-515
+run_uuid: 9e4a04c4528b4e8995328b12c3553776
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690880411874
+status: 3
+tags: []
+user_id: Gaurav
