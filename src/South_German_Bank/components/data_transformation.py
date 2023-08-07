@@ -63,6 +63,7 @@ class DataTransformation:
 
             # Combine X_transformed and y back into one DataFrame
             self.transformed_df = pd.DataFrame(X_transformed, columns=column_names)
+            self.transformed_df.drop(columns=["age", "amount", "telephone", "duration"], axis=1, inplace=True)
             self.transformed_df['credit_risk'] = y
 
             logger.info("Data preprocessing done")

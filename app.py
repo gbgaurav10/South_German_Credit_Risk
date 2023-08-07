@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import os 
-import numpy as np 
-import pandas as pd 
+import numpy as np
+
 from South_German_Bank.pipeline.prediction import PredictionPipeline
 
 
