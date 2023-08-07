@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler, OrdinalEncoder
+from imblearn.over_sampling import SMOTE
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 import os
@@ -65,6 +66,11 @@ class DataTransformation:
             self.transformed_df = pd.DataFrame(X_transformed, columns=column_names)
             self.transformed_df.drop(columns=["age", "amount", "telephone", "duration"], axis=1, inplace=True)
             self.transformed_df['credit_risk'] = y
+
+            ## Apply SMOTE for imbalanced data
+            # Apply SMOTE to the minority class
+            sm = SMOTE(random_state=0)
+            self.transformed_df, _ = sm.fit_resample(self.transformed_df, self.transformed_df["credit_risk"])
 
             logger.info("Data preprocessing done")
 
