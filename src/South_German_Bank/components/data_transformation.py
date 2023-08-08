@@ -4,6 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler, OrdinalEncoder
 from imblearn.over_sampling import SMOTE
 from sklearn.compose import ColumnTransformer
+from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.model_selection import train_test_split
 import os
 from South_German_Bank.logging import logger
@@ -76,6 +77,31 @@ class DataTransformation:
 
         except Exception as e:
             raise e
+
+    def feature_selection(self, k=10):
+        if self.transformed_df is None:
+            raise ValueError("Transformed DataFrame is not available. Please call get_data_transformation first.")
+
+        # Split features and target variable
+        X = self.transformed_df.drop("credit_risk", axis=1)
+        y = self.transformed_df["credit_risk"]
+
+        # Apply feature selection
+        selector = SelectKBest(score_func=f_classif, k=k)
+        X_selected = selector.fit_transform(X, y)
+
+        # Get the selected feature indices
+        selected_indices = selector.get_support(indices=True)
+
+        # Get the column names of the selected features
+        selected_features = X.columns[selected_indices]
+
+        # Update the transformed DataFrame with selected features
+        self.transformed_df = pd.concat([pd.DataFrame(X_selected, columns=selected_features), y], axis=1)
+
+        logger.info(f"Selected {k} best features: {', '.join(selected_features)}")
+
+
 
     def train_test_split(self):
         if self.preprocessor is None:
