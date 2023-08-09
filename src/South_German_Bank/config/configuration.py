@@ -103,8 +103,6 @@ class ConfigurationManager:
             model_path=config.model_path,
             all_params=params,
             metric_file_name=config.metric_file_name,
-            target_column=schema.name,
-            mlflow_uri="https://dagshub.com/gbiamgaurav/South_German_Credit_Risk.mlflow"
-        )
+            target_column=schema.name)
 
         return model_evaluation_config
