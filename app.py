@@ -55,9 +55,8 @@ def index():
 
             obj = PredictionPipeline()
             predict = obj.predict(data)
-
-
-            return render_template('results.html', prediction = str(predict))
+            print("Prediction:", predict)  # Add this line to check the value of predict
+            return render_template('results.html', prediction=str(predict))
         
 
         except Exception as e:
